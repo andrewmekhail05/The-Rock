@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event Listener for mouseover and mouseout</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+
+        #imageButton1{
+            width:1000px;
+            height:500px;
+            background-color:blue;
+            margin-left:15%;
+            margin-right:15%;
+            margin-top:130px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Change an image on mouse hover</h2>
+    <div>
+    <img id='imageButton1' src="dwayne.jpg" alt="therock">
+    <audio id="audio1" autoplay>
+    </div>
+
+    <script>
+        var x=document.getElementById('imageButton1')
+        x.addEventListener("mouseover", myFunction)
+        x.addEventListener("mouseout", someOtherFunction)
+
+        function myFunction()
+        {
+            document.getElementById('imageButton1').src="dwaynethesusjohnson.jpg";
+            document.getElementById('audio1').src="/vine-boom.mp3";
+        }
+
+        function someOtherFunction()
+        {
+            document.getElementById('imageButton1').src="dwayne.jpg";
+        }
+    </script>
+</body>
+</html>
